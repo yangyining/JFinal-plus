@@ -27,7 +27,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *  <http://my.oschina.net/alvinte/blog/69030>
  * @author alvinte
  *
  */
