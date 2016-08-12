@@ -16,7 +16,7 @@
 package com.janeluo.jfinalplus.plugin.config;
 
 import com.google.common.collect.Maps;
-import com.jfinal.ext.kit.ResourceKit;
+import com.janeluo.jfinalplus.kit.ResourceKit;
 import com.jfinal.kit.PathKit;
 import com.jfinal.log.Log;
 

@@ -15,9 +15,9 @@
  */
 package com.janeluo.jfinalplus.plugin.activerecord.tx;
 
+import com.janeluo.jfinalplus.core.ControllerExt;
 import com.jfinal.aop.Interceptor;
 import com.jfinal.aop.Invocation;
-import com.jfinal.ext2.core.ControllerExt;
 import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.IAtom;
 

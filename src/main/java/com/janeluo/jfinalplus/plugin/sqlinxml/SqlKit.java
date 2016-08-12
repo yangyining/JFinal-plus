@@ -15,7 +15,7 @@
  */
 package com.janeluo.jfinalplus.plugin.sqlinxml;
 
-import com.jfinal.ext.kit.JaxbKit;
+import com.janeluo.jfinalplus.kit.JaxbKit;
 import com.jfinal.kit.PathKit;
 import com.jfinal.log.Log;
 

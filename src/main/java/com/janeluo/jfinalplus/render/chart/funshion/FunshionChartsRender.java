@@ -15,7 +15,7 @@
  */
 package com.janeluo.jfinalplus.render.chart.funshion;
 
-import com.jfinal.ext.kit.KeyLabel;
+import com.janeluo.jfinalplus.kit.KeyLabel;
 import com.jfinal.log.Log;
 import com.jfinal.render.Render;
 import com.jfinal.render.RenderException;

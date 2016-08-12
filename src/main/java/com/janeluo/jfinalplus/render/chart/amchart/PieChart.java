@@ -15,7 +15,8 @@
  */
 package com.janeluo.jfinalplus.render.chart.amchart;
 
-import com.jfinal.ext.kit.KeyLabel;
+
+import com.janeluo.jfinalplus.kit.KeyLabel;
 
 import java.util.List;
 

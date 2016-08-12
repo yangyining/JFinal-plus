@@ -17,8 +17,8 @@ package com.janeluo.jfinalplus.plugin.quartz;
 
 import com.google.common.base.Throwables;
 import com.google.common.collect.Maps;
-import com.jfinal.ext.kit.Reflect;
-import com.jfinal.ext.kit.ResourceKit;
+import com.janeluo.jfinalplus.kit.Reflect;
+import com.janeluo.jfinalplus.kit.ResourceKit;
 import com.jfinal.kit.StrKit;
 import com.jfinal.log.Log;
 import com.jfinal.plugin.IPlugin;

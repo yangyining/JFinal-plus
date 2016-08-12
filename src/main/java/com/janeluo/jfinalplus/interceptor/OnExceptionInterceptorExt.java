@@ -15,9 +15,9 @@
  */
 package com.janeluo.jfinalplus.interceptor;
 
+import com.janeluo.jfinalplus.core.ControllerExt;
 import com.jfinal.aop.Interceptor;
 import com.jfinal.aop.Invocation;
-import com.jfinal.ext2.core.ControllerExt;
 
 /**
  * ExceptionInterceptor

@@ -16,9 +16,9 @@
 package com.janeluo.jfinalplus.interceptor;
 
 import com.google.common.collect.Maps;
+import com.janeluo.jfinalplus.render.exception.ExceptionRender;
 import com.jfinal.aop.Interceptor;
 import com.jfinal.aop.Invocation;
-import com.jfinal.ext.render.exception.ExceptionRender;
 import com.jfinal.render.RenderFactory;
 
 import java.util.Map;

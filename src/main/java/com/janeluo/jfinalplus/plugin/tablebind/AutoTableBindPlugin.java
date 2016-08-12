@@ -16,8 +16,8 @@
 package com.janeluo.jfinalplus.plugin.tablebind;
 
 import com.google.common.collect.Lists;
-import com.jfinal.ext.kit.ClassSearcher;
-import com.jfinal.ext.kit.Reflect;
+import com.janeluo.jfinalplus.kit.ClassSearcher;
+import com.janeluo.jfinalplus.kit.Reflect;
 import com.jfinal.kit.PathKit;
 import com.jfinal.kit.StrKit;
 import com.jfinal.log.Log;

@@ -19,7 +19,7 @@ import java.lang.reflect.Field;
 import java.math.BigInteger;
 import java.util.List;
 
-import com.jfinal.ext2.kit.UploadPathKit;
+import com.janeluo.jfinalplus.kit.UploadPathKit;
 import com.jfinal.log.Log;
 import com.jfinal.upload.UploadFile;
 

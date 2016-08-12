@@ -17,18 +17,18 @@ package com.janeluo.jfinalplus.config;
 
 import com.alibaba.druid.filter.stat.StatFilter;
 import com.alibaba.druid.wall.WallFilter;
+import com.janeluo.jfinalplus.filerenamepolicy.RandomFileRenamePolicy;
+import com.janeluo.jfinalplus.handler.ActionExtentionHandler;
+import com.janeluo.jfinalplus.interceptor.NotFoundActionInterceptor;
+import com.janeluo.jfinalplus.interceptor.OnExceptionInterceptorExt;
+import com.janeluo.jfinalplus.kit.PageViewKit;
+import com.janeluo.jfinalplus.plugin.activerecord.generator.MappingKitGeneratorExt;
+import com.janeluo.jfinalplus.plugin.activerecord.generator.ModelGeneratorExt;
+import com.janeluo.jfinalplus.plugin.druid.DruidEncryptPlugin;
+import com.janeluo.jfinalplus.route.AutoBindRoutes;
 import com.jfinal.config.*;
 import com.jfinal.core.Const;
 import com.jfinal.ext.interceptor.POST;
-import com.jfinal.ext.route.AutoBindRoutes;
-import com.jfinal.ext2.handler.ActionExtentionHandler;
-import com.jfinal.ext2.interceptor.NotFoundActionInterceptor;
-import com.jfinal.ext2.interceptor.OnExceptionInterceptorExt;
-import com.jfinal.ext2.kit.PageViewKit;
-import com.jfinal.ext2.plugin.activerecord.generator.MappingKitGeneratorExt;
-import com.jfinal.ext2.plugin.activerecord.generator.ModelGeneratorExt;
-import com.jfinal.ext2.plugin.druid.DruidEncryptPlugin;
-import com.jfinal.ext2.upload.filerenamepolicy.RandomFileRenamePolicy;
 import com.jfinal.kit.StrKit;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.activerecord.generator.BaseModelGenerator;
@@ -285,7 +285,7 @@ public abstract class JFinalConfigExt extends com.jfinal.config.JFinalConfig {
 
 	/**
 	 * DruidPlugin
-	 * @param prop ： property
+	 * @param ds ： property
 	 * @return
 	 */
 	private DruidEncryptPlugin getDruidPlugin(String ds) {

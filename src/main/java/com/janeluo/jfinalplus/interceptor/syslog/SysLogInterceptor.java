@@ -16,16 +16,19 @@
 package com.janeluo.jfinalplus.interceptor.syslog;
 
 import com.google.common.collect.Maps;
+import com.janeluo.jfinalplus.kit.ServletKit;
 import com.jfinal.aop.Interceptor;
 import com.jfinal.aop.Invocation;
 import com.jfinal.core.Controller;
-import com.jfinal.ext.kit.ServletKit;
 import com.jfinal.kit.StrKit;
 
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+/**
+ *
+ */
 public class SysLogInterceptor implements Interceptor {
     Map<String, LogConfig> acitonLogs = Maps.newHashMap();
     LogProcessor logProcesser = null;

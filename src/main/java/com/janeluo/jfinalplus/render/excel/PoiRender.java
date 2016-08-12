@@ -15,7 +15,7 @@
  */
 package com.janeluo.jfinalplus.render.excel;
 
-import com.jfinal.ext.kit.excel.PoiExporter;
+import com.janeluo.jfinalplus.kit.excel.PoiExporter;
 import com.jfinal.log.Log;
 import com.jfinal.render.Render;
 import com.jfinal.render.RenderException;

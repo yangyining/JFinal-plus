@@ -17,9 +17,9 @@ package com.janeluo.jfinalplus.route;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
+import com.janeluo.jfinalplus.kit.ClassSearcher;
 import com.jfinal.config.Routes;
 import com.jfinal.core.Controller;
-import com.jfinal.ext.kit.ClassSearcher;
 import com.jfinal.kit.StrKit;
 import com.jfinal.log.Log;
 
