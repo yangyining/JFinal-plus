@@ -109,7 +109,7 @@ final public class SqlKit {
 
 	/**
 	 * set("name","新的值","addr","新的值")
-	 * @param columns
+	 * @param columnsValues
 	 * @return
 	 */
 	public SqlKit set(Object... columnsValues) {

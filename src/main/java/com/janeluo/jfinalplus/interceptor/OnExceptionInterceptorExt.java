@@ -26,14 +26,14 @@ import com.jfinal.aop.Invocation;
 public class OnExceptionInterceptorExt implements Interceptor {
 
 	@Override
-	public void intercept(Invocation inv) {
+	public void intercept(Invocation inv){
 		try {
 			inv.invoke();
 		} catch (Exception e) {
 			if (inv.getTarget() instanceof ControllerExt) {
 				((ControllerExt)inv.getTarget()).onExceptionError(e);
 			}
-			throw e;
+			throw new RuntimeException(e);
 		}
 	}
 }

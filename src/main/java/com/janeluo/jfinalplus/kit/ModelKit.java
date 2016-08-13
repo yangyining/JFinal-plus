@@ -64,7 +64,6 @@ public class ModelKit {
             logger.error(e.getMessage(), e);
             return model;
         }
-        //TODO bean to model
         return model;
     }
 

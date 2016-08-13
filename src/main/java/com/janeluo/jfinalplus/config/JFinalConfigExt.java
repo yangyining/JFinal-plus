@@ -338,15 +338,18 @@ public abstract class JFinalConfigExt extends com.jfinal.config.JFinalConfig {
 		arp.setShowSql(this.getPropertyToBoolean("db.showsql"));
 
 		// mapping
-		if (!this.geRuned) {
-			try {
-				Class<?> clazz = Class.forName(this.getModelPackage()+"."+this.getMappingKitClassName());
-				Method mapping = clazz.getMethod("mapping", ActiveRecordPlugin.class);
-				mapping.invoke(clazz, arp);
-			} catch (ClassNotFoundException | NoSuchMethodException | SecurityException | IllegalAccessException
-					| IllegalArgumentException | InvocationTargetException e) {
-				throw (new RuntimeException(String.valueOf(e) + ",may be your table is not contain `PrimaryKey`."));
-			}
+		if (!this.geRuned) try {
+			Class<?> clazz = Class.forName(this.getModelPackage() + "." + this.getMappingKitClassName());
+			Method mapping = clazz.getMethod("mapping", ActiveRecordPlugin.class);
+			mapping.invoke(clazz, arp);
+		} catch (NoSuchMethodException e) {
+			throw (new RuntimeException(String.valueOf(e) + ",MappingKit 类中 mapping 方法没找到."));
+		} catch (IllegalAccessException e) {
+			throw (new RuntimeException(String.valueOf(e) + ",MappingKit 执行异常."));
+		} catch (InvocationTargetException e) {
+			throw (new RuntimeException(String.valueOf(e) + ",MappingKit 执行异常."));
+		} catch (ClassNotFoundException e) {
+			throw (new RuntimeException(String.valueOf(e) + ",MappingKit 类未找到."));
 		}
 		return arp;
 	}
