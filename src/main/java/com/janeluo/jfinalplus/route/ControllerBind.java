@@ -17,6 +17,10 @@ package com.janeluo.jfinalplus.route;
 
 import java.lang.annotation.*;
 
+/**
+ * 自动创建路由使用
+ *
+ */
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.TYPE })

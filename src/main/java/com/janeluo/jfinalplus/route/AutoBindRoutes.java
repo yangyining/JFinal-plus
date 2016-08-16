@@ -1,12 +1,12 @@
 /**
  * Copyright (c) 2011-2013, kidzhou 周磊 (zhouleib1412@gmail.com)
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -25,6 +25,10 @@ import com.jfinal.log.Log;
 
 import java.util.List;
 
+/**
+ * 自动创建路由
+ *
+ */
 public class AutoBindRoutes extends Routes {
 
     private boolean autoScan = true;
@@ -45,7 +49,7 @@ public class AutoBindRoutes extends Routes {
     }
 
     @SuppressWarnings("unchecked")
-	public AutoBindRoutes addExcludeClasses(Class<? extends Controller>... clazzes) {
+    public AutoBindRoutes addExcludeClasses(Class<? extends Controller>... clazzes) {
         if (clazzes != null) {
             for (Class<? extends Controller> clazz : clazzes) {
                 excludeClasses.add(clazz);
@@ -69,16 +73,14 @@ public class AutoBindRoutes extends Routes {
     }
 
     @Override
-    @SuppressWarnings({ "rawtypes", "unchecked" })
     public void config() {
         List<Class<? extends Controller>> controllerClasses = ClassSearcher.of(Controller.class)
                 .includeAllJarsInLib(includeAllJarsInLib).injars(includeJars).search();
-        ControllerBind controllerBind = null;
-        for (Class controller : controllerClasses) {
+        for (Class<? extends Controller> controller : controllerClasses) {
             if (excludeClasses.contains(controller)) {
                 continue;
             }
-            controllerBind = (ControllerBind) controller.getAnnotation(ControllerBind.class);
+            ControllerBind controllerBind = controller.getAnnotation(ControllerBind.class);
             if (controllerBind == null) {
                 if (!autoScan) {
                     continue;
@@ -96,9 +98,9 @@ public class AutoBindRoutes extends Routes {
         }
     }
 
-    private String controllerKey(Class<Controller> clazz) {
+    private String controllerKey(Class<? extends Controller> clazz) {
         Preconditions.checkArgument(clazz.getSimpleName().endsWith(suffix),
-                clazz.getName()+" is not annotated with @ControllerBind and not end with " + suffix);
+                clazz.getName() + " is not annotated with @ControllerBind and not end with " + suffix);
         String controllerKey = "/" + StrKit.firstCharToLowerCase(clazz.getSimpleName());
         controllerKey = controllerKey.substring(0, controllerKey.indexOf(suffix));
         return controllerKey;

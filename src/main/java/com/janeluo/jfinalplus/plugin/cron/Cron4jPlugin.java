@@ -28,6 +28,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+/**
+ * 轻量级定时任务插件
+ *
+ */
 public class Cron4jPlugin implements IPlugin {
 
     private static final String JOB = "job";
@@ -102,10 +106,7 @@ public class Cron4jPlugin implements IPlugin {
 
     private boolean isEnableJob(String enableKey) {
         Object enable = jobProp.get(enableKey);
-        if (enable != null && "false".equalsIgnoreCase((enable + "").trim())) {
-            return false;
-        }
-        return true;
+        return enable != null && "true".equalsIgnoreCase((enable + "").trim());
     }
 
     @Override

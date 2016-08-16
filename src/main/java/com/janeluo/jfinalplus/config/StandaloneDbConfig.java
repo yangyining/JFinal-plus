@@ -113,9 +113,10 @@ public class StandaloneDbConfig {
 			}
 		}
 
+
 		@Override
 		public void configMoreConstants(Constants me) {
-
+System.out.println("-----------------");
 		}
 
 		@Override
