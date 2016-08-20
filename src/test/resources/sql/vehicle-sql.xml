@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sqlGroup name="vehicle">
+	<sql id="insertOrUpdate">INSERT INTO vehicle
+		(voucher_id,reason_id,team_id,illegal_address,
+		brand,police,party,type_id,take_address,color,key_id,origin_id,rescue_mileage,
+		rescue_expenses,park_expenses,park_operator,park_time,park_remark,park_photo,
+		park_photo_link,put_id,put_operator,put_time,opinion,put_remark,put_photo,
+		put_photo_link,sum,state,valid,park_daynum,park_code,handle) VALUES (
+		?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+	</sql>
+</sqlGroup>
